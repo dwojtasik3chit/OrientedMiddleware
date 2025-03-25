@@ -30,7 +30,7 @@ public class ProductController {
         return repository.save(productData);
     }
 
-    @DeleteMapping("delete/{productid}")
+    @DeleteMapping("/delete/{productid}")
     public void deleteproductbyid (String productid){
         ProductData exist = repository.findByProductID(productid);
         if(exist != null){
